@@ -1,0 +1,53 @@
+# Temporary files and local tools
+/tmp/
+**/tmp/
+**/temp/
+*.tmp
+*.temp
+*.log
+*.bak
+*~
+
+# STM32CubeIDE / CMake build outputs
+**/Debug/
+**/Release/
+**/build/
+**/cmake-build-*/
+*.o
+*.obj
+*.d
+*.su
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.exe
+*.dll
+*.pdb
+
+# Machine-local IDE settings (keep project definitions and .ioc files)
+.vscode/
+.idea/
+**/.metadata/
+**/.settings/
+*.launch
+
+# Python and Node tooling caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Typst sources, final report PDFs, diagrams and OpenOCD .cfg are tracked.

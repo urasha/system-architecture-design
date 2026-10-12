@@ -1,0 +1,23 @@
+{
+  "theme": "neutral",
+  "htmlLabels": false,
+  "markdownAutoWrap": false,
+  "themeVariables": {
+    "fontFamily": "Arial",
+    "fontSize": "17px",
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#111111",
+    "primaryBorderColor": "#333333",
+    "lineColor": "#333333",
+    "secondaryColor": "#f4f4f4",
+    "tertiaryColor": "#ffffff"
+  },
+  "flowchart": {
+    "htmlLabels": false,
+    "wrappingWidth": 400,
+    "curve": "linear",
+    "nodeSpacing": 24,
+    "rankSpacing": 34,
+    "padding": 14
+  }
+}

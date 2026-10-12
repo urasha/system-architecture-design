@@ -1,0 +1,14 @@
+flowchart TB
+    MAIN["main.c<br/>Главный цикл"]
+    BTN["button.c<br/>Дребезг"]
+    FSM["traffic_light.c<br/>Светофор"]
+    BOARD["sdk_board.c<br/>Стенд"]
+    GPIO["custom_gpio.c<br/>GPIO"]
+    HW["PC15<br/>PD13-PD15"]
+    MAIN -->|"Опрос"| BTN
+    BTN -.->|"Нажатие через main"| FSM
+    MAIN -->|"Обновление"| FSM
+    MAIN -->|"Чтение"| BOARD
+    FSM -->|"Вывод цветов"| BOARD
+    BOARD --> GPIO
+    GPIO --> HW
