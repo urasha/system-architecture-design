@@ -1,0 +1,22 @@
+flowchart TB
+    MAIN["main.c: инициализация и главный цикл"]
+    CON["console.c: эхо, строка, команды"]
+    UART["uart_driver.c: RX/TX, режимы I/P"]
+    BTN["button.c: фильтр дребезга"]
+    FSM["traffic_light.c: автомат светофора"]
+    BOARD["sdk_board.c: кнопка и светодиоды"]
+    GPIO["custom_gpio.c: регистры GPIO"]
+    HW["USART6: PC6 / PC7; кнопка: PC15; LED: PD13–PD15"]
+    MAIN --> CON
+    MAIN --> BTN
+    MAIN --> FSM
+    MAIN --> UART
+    CON <-->|"байты и ответы"| UART
+    CON -->|"команды"| FSM
+    BTN -.->|"событие через main"| FSM
+    MAIN -->|"чтение кнопки"| BOARD
+    FSM -->|"callback вывода"| BOARD
+    BOARD --> GPIO
+    UART -->|"настройка AF8"| GPIO
+    UART --> HW
+    GPIO --> HW
